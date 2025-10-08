@@ -30,7 +30,7 @@ This tool:
 ```
 gdoc-ocr-sample/
 ├─ config/
-│  └─ ocr-project-452905-8b0334d676b8.json   # your service-account key (do NOT commit)
+│  └─ ocr-project.json   # your service-account key (do NOT commit)
 ├─ output/                                   # OCR results go here (gitignored)
 ├─ src/
 │  ├─ docai_client.py                        # Doc AI client + save helpers
@@ -51,7 +51,7 @@ gdoc-ocr-sample/
 
 ### Create / locate the following values
 
-- **Project ID** – e.g., `spc-ocr`
+- **Project ID** – e.g., `ocr-project`
 - **Location** – region of your processor, e.g., `us`
 - **Processor ID** – the ID of your OCR processor in Document AI
 - **Service account JSON** – download its key file
@@ -77,7 +77,7 @@ pip install -r requirements.txt
 
 1. Put your service-account key in:
    ```
-   ./config/ocr-project-452905-8b0334d676b8.json
+   ./config/ocr-project.json
    ```
    > You can use a different filename; just make sure `.env` points to it.
 
@@ -85,8 +85,8 @@ pip install -r requirements.txt
    ```bash
    cp .env.example .env
    # Open .env and set the following:
-   # GOOGLE_APPLICATION_CREDENTIALS=./config/ocr-project-452905-8b0334d676b8.json
-   # DOC_AI_PROJECT_ID=spc-ocr
+   # GOOGLE_APPLICATION_CREDENTIALS=./config/ocr-project.json
+   # DOC_AI_PROJECT_ID=ocr-project
    # DOC_AI_LOCATION=us
    # DOC_AI_PROCESSOR_ID=YOUR_OCR_PROCESSOR_ID
    ```
@@ -144,8 +144,8 @@ Text: output/run_20250101_104233/text.txt
 
 | Key | Description | Example |
 | --- | --- | --- |
-| `GOOGLE_APPLICATION_CREDENTIALS` | Path to service account JSON (absolute or relative) | `./config/ocr-project-452905-8b0334d676b8.json` |
-| `DOC_AI_PROJECT_ID` | Your GCP Project ID | `spc-ocr` |
+| `GOOGLE_APPLICATION_CREDENTIALS` | Path to service account JSON (absolute or relative) | `./config/ocr-project.json` |
+| `DOC_AI_PROJECT_ID` | Your GCP Project ID | `ocr-project` |
 | `DOC_AI_LOCATION` | Region of your processor (changes endpoint) | `us` |
 | `DOC_AI_PROCESSOR_ID` | OCR Processor ID from Document AI console | `1234567890abcdef` |
 | `OUTPUT_DIR` (optional) | Base folder for results | `output` |

@@ -1,0 +1,37 @@
+
+---
+
+### `.gitignore`
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.dist/
+build/
+dist/
+
+# Virtual envs
+.venv/
+venv/
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# App outputs & logs
+*.log
+
+# Local configuration & secrets
+.pyi
+.pak
+.env
+.env.*
+config/*.json
+config/*.pem
+config/*.p12

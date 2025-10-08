@@ -191,10 +191,3 @@ A: This sample writes TXT/JSON. If you want a searchable PDF, say the word and w
 
 - **Never commit**: `.env`, `config/*.json`, and `output/`.
 - If a **private key** is exposed publicly, **revoke & rotate** it in Google Cloud IAM → Service Accounts.
-
----
-
-## Contributing / License
-
-- PRs welcome for features like batch mode, hOCR/ALTO, or PDF+text outputs.
-- License: MIT (add a `LICENSE` file if you plan to open-source).
